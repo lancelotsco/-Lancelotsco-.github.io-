@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>選擇預算</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="budget.js"></script>
+
+<body>
+
+    <h1>今天不踩雷！舌尖的遺珠小旅行</h1>
+
+    <h2>請選擇預算</h2>
+
+    <p id="showTransport"></p>
+<body>
+
+    <div class="card">
+
+        <h1>選擇預算</h1>
+
+        <p class="subtitle">
+            選擇適合你的旅遊消費方式
+        </p>
+
+        <button onclick="chooseBudget('平價探索')">
+            💰 平價探索<br>
+            <span>500元以下</span>
+        </button>
+
+        <button onclick="chooseBudget('經典品味')">
+            🍽️ 經典品味<br>
+            <span>500~1000元</span>
+        </button>
+
+        <button onclick="chooseBudget('奢享體驗')">
+            ✨ 奢享體驗<br>
+            <span>1000元以上</span>
+        </button>
+
+    </div>
+
+    <script src="budget.js"></script>
+
+</body>
+
+    <script>
+
+        let transport =
+            localStorage.getItem("transport");
+
+        document.getElementById("showTransport")
+            .innerText =
+            "您選擇的是：" + transport;
+
+    </script>
+
+</body>
+
+</html>
