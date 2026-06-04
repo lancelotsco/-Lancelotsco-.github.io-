@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>確認規劃</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <h1>今天不踩雷！舌尖的遺珠小旅行</h1>
+
+        <p class="subtitle">
+            確認您的規劃內容
+        </p>
+
+        <div id="result"></div>
+
+        <br>
+
+        <button onclick="history.back()">
+            ← 返回修改
+        </button>
+
+        <button onclick="showRoute()">
+            🔍 開始探索
+        </button>
+
+    </div>
+
+    <script>
+
+        let transport = localStorage.getItem("transport");
+        let budget = localStorage.getItem("budget");
+
+        document.getElementById("result").innerHTML =
+        `
+        <h2>🚗 交通方式</h2>
+        <p>${transport}</p>
+
+        <h2>💰 預算等級</h2>
+        <p>${budget}</p>
+        `;
+
+        function showRoute() {
+
+            if (transport === "自駕漫遊" && budget === "平價探索") {
+                window.location.href = "https://reurl.cc/Ga6KQy";
+            }
+
+            else if (transport === "自駕漫遊" && budget === "經典品味") {
+                window.location.href = "https://reurl.cc/M2QyDp";
+            }
+
+            else if (transport === "自駕漫遊" && budget === "奢享體驗") {
+                window.location.href = "https://reurl.cc/A9r0z3";
+            }
+
+            else if (transport === "單車漫遊" && budget === "平價探索") {
+                window.location.href = "https://reurl.cc/ep2d7x";
+            }
+
+            else if (transport === "單車漫遊" && budget === "經典品味") {
+                window.location.href = "https://reurl.cc/kpea3n";
+            }
+
+            else if (transport === "單車漫遊" && budget === "奢享體驗") {
+                window.location.href = "https://reurl.cc/dp3mlg";
+            }
+
+            else if (transport === "大眾暢遊" && budget === "平價探索") {
+                window.location.href = "https://reurl.cc/ovM54j";
+            }
+
+            else if (transport === "大眾暢遊" && budget === "經典品味") {
+                window.location.href = "https://reurl.cc/ep2dAx";
+            }
+
+            else if (transport === "大眾暢遊" && budget === "奢享體驗") {
+                window.location.href = "https://reurl.cc/kpeagn";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+
